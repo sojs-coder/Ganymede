@@ -1,0 +1,11 @@
+/* Webfont: Vanderick-Regular */@font-face {
+    font-family: 'Vanderick';
+    src: url('Vanderick.eot'); /* IE9 Compat Modes */
+    src: url('Vanderick.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('Vanderick.woff') format('woff'), /* Modern Browsers */
+         url('Vanderick.ttf') format('truetype'); /* Safari, Android, iOS */
+             font-style: normal;
+    font-weight: normal;
+    text-rendering: optimizeLegibility;
+}
+

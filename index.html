@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link rel="stylesheet" type="text/css" media="screen" href="vanderick/Vanderick.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <script src = 'shortcuts.js'></script>
+  <script>
+    shortcut.add("Ctrl+Shift+I",function() {
+    	window.location = 'https://www.youtube.com/watch?v=QtBDL8EiNZo'
+    });
+    shortcut.add("Ctrl+Shift+J",function() {
+    	window.location = 'https://www.youtube.com/watch?v=QtBDL8EiNZo'
+    });
+  </script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Spice Fights</title>
+   <script src="/socket.io/socket.io.js"></script>
+  <link href="/style.css" rel="stylesheet" type="text/css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.2.3/howler.min.js" integrity="sha512-6+YN/9o9BWrk6wSfGxQGpt3EUK6XeHi6yeHV+TYD2GR0Sj/cggRpXr1BrAQf0as6XslxomMUxXp2vIl+fv0QRA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script>
+    var socket = io();
+  </script>
+</head>
+
+<body>
+<!-- room_name room_des in_room text_out text_in-->
+  <div class="container">
+    <div class="header"></div>
+    <div class="rH"><i id = 'settings' class="fa fa-cog" aria-hidden="true"></i>
+</div>
+    <div class="mH">
+      <h1>SPICE FIGHTS</h1>
+      <i>Trade, Build, Destroy, Explore</i>
+    </div>
+    <div class="lH"></div>
+    <div class="text_out">
+      <div class="progress">
+        <div class='prog-container'>
+          <div class='prog-health' id = 'prog-health'>-/100</div>
+        </div>
+        <div class='prog-container'>
+          <div class='prog-stamina' id = 'prog-stamina'>-/100</div>
+        </div>
+      </div>
+      <div class="out_out" id = "text_out">
+        <h2>SPICE FIGHTS</h2>
+        <p>To jump into the game now, type "join" and your name into the command box at the bottom of the screen.</p>
+      </div>
+    </div>
+    <div class="menu">
+      <div class="menuItem"></div>
+      <div class="menu_out" id = "menu_out">
+        
+      </div>
+      <div class="lM m active" id = 'room_data'>Room</div>
+      <div class="mM m" id = 'player_data'>Player</div>
+      <div class="rM m" id = "map_data">Map</div>
+    </div>
+    <div class="text_in"><input type = "text" id = "text_in" autocomplete='off' autofocus placeholder = '>>>' focus></div>
+  </div>
+
+
+  
+  
+  <audio
+        controls
+        src="/background.mp3" id = 'background' loop>
+            Your browser does not support the
+            <code>audio</code> element.
+    </audio>
+   <audio
+        controls
+        src="/key_click.mp3" id = 'click'>
+            Your browser does not support the
+            <code>audio</code> element.
+    </audio>
+  <script src="/script.js"></script>
+
+
+
+
+</body>
+
+</html>

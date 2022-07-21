@@ -1,0 +1,141 @@
+.container {  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 2fr 8fr 0.7fr;
+  gap: 10px 10px;
+  grid-auto-flow: row;
+  width: 100%; 
+  height: 100%; 
+  font-family: Vanderick;
+  justify-content: center; 
+}
+body{
+  background-color: black;
+  color: #ececec;
+  height: 100vh;
+  padding: none;
+  overflow-y: hidden;
+}
+
+.header { grid-area: 1 / 1 / 2 / 4;
+        }
+
+.rH { grid-area: 1 / 3 / 2 / 4; }
+
+.mH { grid-area: 1 / 2 / 2 / 3;
+    text-align: center;}
+.mH h1{
+  font-size: 24px;
+}
+.lH { grid-area: 1 / 1 / 2 / 2; }
+
+.text_out {  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 0.4fr 1.3fr 1.3fr;
+  gap: 5px 5px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "progress progress progress"
+    "out_out out_out out_out"
+    "out_out out_out out_out";
+  grid-area: 2 / 1 / 3 / 3;
+           overflow-y:scroll;
+           overflow-x: hidden;
+           min-height: 0;
+}
+
+.progress { grid-area: progress; }
+
+.out_out { grid-area: out_out;
+         max-height: 100%;
+         padding: 6px;
+         min-height: 0;
+         overflow-y: scroll;
+          overflow-x: hidden;
+         border-right: 1px solid #888}
+
+.menu {  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 0.4fr 1.6fr 1fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-area: 2 / 3 / 3 / 4;
+       align-content: center;
+       min-height: 0;
+       overflow:scroll;
+}
+
+.menuItem { grid-area: 1 / 1 / 2 / 4; }
+
+.menu_out { grid-area: 2 / 1 / 4 / 4;
+          min-height:0;
+          overflow: scroll;}
+
+.lM { grid-area: 1 / 1 / 2 / 2;
+    text-align: center;}
+
+.mM { grid-area: 1 / 2 / 2 / 3; 
+    text-align: center;}
+
+.rM { grid-area: 1 / 3 / 2 / 4; 
+    text-align: center;}
+
+.text_in { grid-area: 3 / 1 / 4 / 4; }
+input{
+  width: 100%;
+  border: 1px solid white;
+  border-radius: 0;
+  background-color: black;
+  color: #ccc;
+  padding: 2px;
+}
+input:focus{
+  outline:none;
+}
+
+.prog-container{
+  width: 100%;
+  height: 50%;
+  border-radius: 2px;
+  text-align: left;
+}
+.prog-health{
+  width: 0%;
+  height: 100%;
+  text-align: right;
+  background-color: darkgreen;
+  padding: 2px;
+  transition: 500ms;
+}
+.prog-stamina{
+  width: 0%;
+  height: 100%;
+  text-align: right;
+  padding: 2px;
+  background-color: #ffb700;
+  transition: 500ms;
+}
+audio{
+  display: none;
+}
+.m{
+  cursor:pointer;
+  font-size: 150%;
+
+}
+.fa-cog{
+  cursor: pointer
+  transition: 150ms;
+}
+.fa-cog:hover{
+  transform: rotate(45deg);
+  color: lightblue;
+}
+.rH:nth-child(n){
+  margin: auto;
+}
+.m:hover:not(.active){
+  background-color: rgba(255,255,255,0.2)
+}
+.active{
+    border: 1px solid white;
+}
